@@ -1,0 +1,433 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv;",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "init_chat_model;",
+        "importPath": "langchain.chat_models",
+        "description": "langchain.chat_models",
+        "isExtraImport": true,
+        "detail": "langchain.chat_models",
+        "documentation": {}
+    },
+    {
+        "label": "HumanMessage",
+        "importPath": "langchain_core.messages",
+        "description": "langchain_core.messages",
+        "isExtraImport": true,
+        "detail": "langchain_core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "SystemMessage",
+        "importPath": "langchain_core.messages",
+        "description": "langchain_core.messages",
+        "isExtraImport": true,
+        "detail": "langchain_core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "PromptTemplate;",
+        "importPath": "langchain.prompts.prompt",
+        "description": "langchain.prompts.prompt",
+        "isExtraImport": true,
+        "detail": "langchain.prompts.prompt",
+        "documentation": {}
+    },
+    {
+        "label": "Scraper",
+        "importPath": "rag_scraper.scraper",
+        "description": "rag_scraper.scraper",
+        "isExtraImport": true,
+        "detail": "rag_scraper.scraper",
+        "documentation": {}
+    },
+    {
+        "label": "Converter",
+        "importPath": "rag_scraper.converter",
+        "description": "rag_scraper.converter",
+        "isExtraImport": true,
+        "detail": "rag_scraper.converter",
+        "documentation": {}
+    },
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "FastMCP",
+        "importPath": "fastmcp",
+        "description": "fastmcp",
+        "isExtraImport": true,
+        "detail": "fastmcp",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.main",
+        "description": "00_Basic_LLM.main",
+        "peekOfCode": "template = \"\"\"a\"\"\"\nmodel = init_chat_model(\"gemini-2.0-flash\", model_provider=\"google_genai\")\nchain = PromptTemplate(list[str],template);\nfor token in model.stream(messages):\n    print(token.content, end=\"|\")",
+        "detail": "00_Basic_LLM.main",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.main",
+        "description": "00_Basic_LLM.main",
+        "peekOfCode": "model = init_chat_model(\"gemini-2.0-flash\", model_provider=\"google_genai\")\nchain = PromptTemplate(list[str],template);\nfor token in model.stream(messages):\n    print(token.content, end=\"|\")",
+        "detail": "00_Basic_LLM.main",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.main",
+        "description": "00_Basic_LLM.main",
+        "peekOfCode": "chain = PromptTemplate(list[str],template);\nfor token in model.stream(messages):\n    print(token.content, end=\"|\")",
+        "detail": "00_Basic_LLM.main",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.rag",
+        "description": "00_Basic_LLM.rag",
+        "peekOfCode": "url = \"https://docs.astral.sh/uv/\"\nhtml_content = Scraper.fetch_html(url)\n# Convert to Markdown\nmarkdown_content = Converter.html_to_markdown(\n    html=html_content,\n    base_url='https:// docs.astral.sh',\n    parser_features='html.parser',\n    ignore_links=True\n)\nprint(markdown_content)",
+        "detail": "00_Basic_LLM.rag",
+        "documentation": {}
+    },
+    {
+        "label": "html_content",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.rag",
+        "description": "00_Basic_LLM.rag",
+        "peekOfCode": "html_content = Scraper.fetch_html(url)\n# Convert to Markdown\nmarkdown_content = Converter.html_to_markdown(\n    html=html_content,\n    base_url='https:// docs.astral.sh',\n    parser_features='html.parser',\n    ignore_links=True\n)\nprint(markdown_content)",
+        "detail": "00_Basic_LLM.rag",
+        "documentation": {}
+    },
+    {
+        "label": "markdown_content",
+        "kind": 5,
+        "importPath": "00_Basic_LLM.rag",
+        "description": "00_Basic_LLM.rag",
+        "peekOfCode": "markdown_content = Converter.html_to_markdown(\n    html=html_content,\n    base_url='https:// docs.astral.sh',\n    parser_features='html.parser',\n    ignore_links=True\n)\nprint(markdown_content)",
+        "detail": "00_Basic_LLM.rag",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"mcp-server\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"mcp-server\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"mcp-server\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"mcp-server\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"mcp-server\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "mcp-server..venv.bin.activate_this",
+        "description": "mcp-server..venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "mcp-server..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "deposit",
+        "kind": 2,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "def deposit():\n    while True:\n        amount = input(\"What is the deposit amount? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if amount > 0:\n                break\n            else:\n                print(\"Amount should be greater than 0\")\n        else:",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_number_of_lines",
+        "kind": 2,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "def get_number_of_lines():\n    while True:\n        lines = input(\n            \"Enter the number of lines to bet on (1-\" + str(MAX_LINES) + \") ? \")\n        if lines.isdigit():\n            lines = int(lines)\n            if 1 <= lines <= MAX_LINES:\n                break\n            else:\n                print(\"Number of lines not valid\")",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_bet",
+        "kind": 2,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "def get_bet():\n    while True:\n        amount = input(\"What is the like to bet? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if MIN_BET <= amount <= MAX_BET:\n                break\n            else:\n                print(f\"Amount should be between ${MIN_BET} and ${MAX_BET}\")\n        else:",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "def main():\n    balance = deposit()\n    lines = get_number_of_lines()\n    while True:\n        bet = get_bet()\n        total_bet = bet*lines\n        if total_bet>balance:\n            print(f\"You bet is greater than you balance try gain? Your balance is ${balance}\")\n        else:\n            break",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_LINES",
+        "kind": 5,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "MAX_LINES = 3\nMAX_BET = 100\nMIN_BET = 1\ndef deposit():\n    while True:\n        amount = input(\"What is the deposit amount? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if amount > 0:\n                break",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_BET",
+        "kind": 5,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "MAX_BET = 100\nMIN_BET = 1\ndef deposit():\n    while True:\n        amount = input(\"What is the deposit amount? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if amount > 0:\n                break\n            else:",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "MIN_BET",
+        "kind": 5,
+        "importPath": "pyhton_workshop.main",
+        "description": "pyhton_workshop.main",
+        "peekOfCode": "MIN_BET = 1\ndef deposit():\n    while True:\n        amount = input(\"What is the deposit amount? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if amount > 0:\n                break\n            else:\n                print(\"Amount should be greater than 0\")",
+        "detail": "pyhton_workshop.main",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "section-1.exc-01..venv.bin.activate_this",
+        "description": "section-1.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "section-1.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "dataset",
+        "kind": 5,
+        "importPath": "section-1.exc-01.main",
+        "description": "section-1.exc-01.main",
+        "peekOfCode": "dataset = pd.read_csv('./data/Data.csv')\nprint(dataset)",
+        "detail": "section-1.exc-01.main",
+        "documentation": {}
+    }
+]
