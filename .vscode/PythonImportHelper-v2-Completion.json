@@ -65,12 +65,64 @@
         "documentation": {}
     },
     {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pandas",
         "description": "pandas",
         "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
         "documentation": {}
     },
     {
@@ -163,15 +215,6 @@
         "documentation": {}
     },
     {
-        "label": "matplotlib.pyplot",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
-        "documentation": {}
-    },
-    {
         "label": "seaborn",
         "kind": 6,
         "isExtraImport": true,
@@ -187,49 +230,6 @@
         "importPath": "warnings",
         "description": "warnings",
         "detail": "warnings",
-        "documentation": {}
-    },
-    {
-        "label": "runpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "runpy",
-        "description": "runpy",
-        "detail": "runpy",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "site",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "site",
-        "description": "site",
-        "detail": "site",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -295,57 +295,147 @@
         "documentation": {}
     },
     {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "description": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "00_data_for_ai.exc-01..venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "dataset",
+        "kind": 5,
+        "importPath": "00_data_for_ai.exc-01.main",
+        "description": "00_data_for_ai.exc-01.main",
+        "peekOfCode": "dataset = pd.read_csv('./data/Data.csv')\nprint(dataset)",
+        "detail": "00_data_for_ai.exc-01.main",
+        "documentation": {}
+    },
+    {
         "label": "load_and_explore_data",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def load_and_explore_data(file_path):\n    \"\"\"Load the dataset and perform initial exploration\"\"\"\n    print(\"Loading Titanic dataset...\")\n    df = pd.read_csv(file_path)\n    print(f\"Dataset shape: {df.shape}\")\n    print(\"\\nColumn information:\")\n    print(df.info())\n    print(\"\\nFirst few rows:\")\n    print(df.head())\n    print(\"\\nSurvival rate:\")",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
         "label": "preprocess_data",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def preprocess_data(df):\n    \"\"\"Clean and preprocess the data for modeling\"\"\"\n    # Create a copy to avoid modifying original data\n    data = df.copy()\n    # Feature engineering\n    # Extract title from name\n    data['Title'] = data['Name'].str.extract(' ([A-Za-z]+)\\.', expand=False)\n    data['Title'] = data['Title'].replace(['Lady', 'Countess','Capt', 'Col',\n                                          'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')\n    data['Title'] = data['Title'].replace('Mlle', 'Miss')",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
         "label": "train_models",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def train_models(X, y):\n    \"\"\"Train multiple models and compare their performance\"\"\"\n    # Split the data\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)\n    # Scale features for logistic regression\n    scaler = StandardScaler()\n    X_train_scaled = scaler.fit_transform(X_train)\n    X_test_scaled = scaler.transform(X_test)\n    # Initialize models\n    models = {",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
         "label": "analyze_feature_importance",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def analyze_feature_importance(model, feature_names):\n    \"\"\"Analyze and plot feature importance for tree-based models\"\"\"\n    if hasattr(model, 'feature_importances_'):\n        importance_df = pd.DataFrame({\n            'feature': feature_names,\n            'importance': model.feature_importances_\n        }).sort_values('importance', ascending=False)\n        print(\"\\nFeature Importance:\")\n        print(importance_df)\n        # Plot feature importance",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
         "label": "predict_survival",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def predict_survival(model, scaler, label_encoders, passenger_data, model_name):\n    \"\"\"Make prediction for a new passenger\"\"\"\n    # Create a dataframe with the passenger data\n    passenger_df = pd.DataFrame([passenger_data])\n    # Apply same preprocessing\n    for feature, le in label_encoders.items():\n        if feature in passenger_df.columns:\n            # Handle unknown categories\n            try:\n                passenger_df[feature] = le.transform(passenger_df[feature])",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
-        "importPath": "01_uw_practice.data_clensing.titanic_survival_model",
-        "description": "01_uw_practice.data_clensing.titanic_survival_model",
+        "importPath": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
+        "description": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "peekOfCode": "def main():\n    \"\"\"Main function to run the complete analysis\"\"\"\n    # Load and explore data\n    df = load_and_explore_data('category_text.csv')\n    # Preprocess data\n    X, y, label_encoders, processed_data = preprocess_data(df)\n    print(f\"\\nFeatures used for modeling: {list(X.columns)}\")\n    print(f\"Feature matrix shape: {X.shape}\")\n    # Train models\n    results, X_test, y_test, scaler = train_models(X, y)",
-        "detail": "01_uw_practice.data_clensing.titanic_survival_model",
+        "detail": "01_data_cleaning_practice.data_clensing.titanic_survival_model",
         "documentation": {}
     },
     {
@@ -490,96 +580,6 @@
         "description": "pyhton_workshop.main",
         "peekOfCode": "MIN_BET = 1\ndef deposit():\n    while True:\n        amount = input(\"What is the deposit amount? $\")\n        if amount.isdigit():\n            amount = int(amount)\n            if amount > 0:\n                break\n            else:\n                print(\"Amount should be greater than 0\")",
         "detail": "pyhton_workshop.main",
-        "documentation": {}
-    },
-    {
-        "label": "bin_dir",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "base",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"PATH\"]",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"VIRTUAL_ENV\"]",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"exc-01\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "prev_length",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.path[:]",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.real_prefix",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.prefix",
-        "kind": 5,
-        "importPath": "section-1.exc-01..venv.bin.activate_this",
-        "description": "section-1.exc-01..venv.bin.activate_this",
-        "peekOfCode": "sys.prefix = base",
-        "detail": "section-1.exc-01..venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "dataset",
-        "kind": 5,
-        "importPath": "section-1.exc-01.main",
-        "description": "section-1.exc-01.main",
-        "peekOfCode": "dataset = pd.read_csv('./data/Data.csv')\nprint(dataset)",
-        "detail": "section-1.exc-01.main",
         "documentation": {}
     }
 ]
